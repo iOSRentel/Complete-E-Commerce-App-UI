@@ -76,7 +76,7 @@ struct Home: View {
                         
                         }
                     }
-                Divider()
+//                Divider()
                 
                 .padding(.horizontal, 20)
                 }

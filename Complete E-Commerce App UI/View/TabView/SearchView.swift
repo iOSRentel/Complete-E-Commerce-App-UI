@@ -67,19 +67,21 @@ struct SearchView: View {
             
 //MARK: - Fileter Results
             ScrollView(.vertical, showsIndicators: false) {
+            
 //MARK: - Staggered Grid
-                StraggeredGrid(columns: 2, list: homeData.products) { product in
+                StraggeredGrid(columns: 2, spacing: 20, list: homeData.products) { product in
                     
 //MARK: - Card View
                     ProductCardView(product: product)
                     
                 }
+                .padding()
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         
 //MARK: !!! background всегo searchView ( темная тема не работает в поисковике)
-        .background(Color.white)
+        .background(.white)
         
 //MARK: - Activation Text Field финалочка
         .onAppear {
